@@ -16,7 +16,7 @@ function Swapper () {
     //     classes: ['Swapper']
     // });
 
-    this.el = new DOMElement(this);
+    this.el = new DOMElement(this).setProperty('overflow', 'hidden');
 
     // store the current section
     this.currentSection = null;
@@ -74,7 +74,7 @@ Swapper.prototype.changeSection = function changeSection (to) {
           //       duration: 500
           //   });
           // }
-          
+
     }.bind(this));
 
     this.currentSection = to;

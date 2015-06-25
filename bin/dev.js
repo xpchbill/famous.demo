@@ -11,7 +11,7 @@ var finalhandler = require('finalhandler');
 var serveStatic = require('serve-static');
 var chalk = require('chalk');
 
-var b = browserify(path.resolve('./src/twitterus/index.js'), watchify.args);
+var b = browserify(path.resolve('./src/twitterus-sildeMenu/index.js'), watchify.args);
 var w = watchify(b);
 
 var bytes, time;
