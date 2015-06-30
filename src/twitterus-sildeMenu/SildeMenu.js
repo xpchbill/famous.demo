@@ -11,11 +11,10 @@ function SildeMenu () {
 
     this.el = new DOMElement(this, {
         classes: ['sildeMenu']
-    }).setProperty('textAlign', 'center')
-       .setProperty('lineHeight', '100px')
-       .setProperty('backgroundColor', 'black')
-       .setProperty('zIndex', '20')
-       .setProperty('fontSize', '30px');
+    })
+      .setProperty('lineHeight', '100px')
+      .setProperty('backgroundColor', 'black')
+      .setProperty('zIndex', '20');
 }
 
 SildeMenu.prototype = Object.create(Node.prototype);
@@ -26,25 +25,18 @@ SildeMenu.prototype.onReceive = function onReceive (event) {
     if(event === 'headerClick'){
         if(this.openStatus){
             this.animation.setOrigin(0, 0, 0, {
-                duration: 200
+                duration: 300,
+                curve: 'outCirc'
             });
             this.openStatus = false;
         }else {
             this.animation.setOrigin(-4, 0, 0, {
-                duration: 200
+                duration: 300,
+                curve: 'outCirc'
             });
             this.openStatus = true;
         }
     }
 };
-
-//
-// SildeMenu.prototype.close = function () {
-//     this.setScale(0.8, 1, 1).setOrigin(-4, 0, 0);
-// };
-//
-// SildeMenu.prototype.open = function () {
-//     this.setScale(0.8, 1, 1).setOrigin(0, 0, 0);
-// };
 
 module.exports = SildeMenu;

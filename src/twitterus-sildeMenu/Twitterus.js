@@ -69,7 +69,7 @@ Twitterus.prototype.onReceive = function onReceive (event, payload) {
             this.openStatus = false;
         }else {
             //this.setPosition(0, 0, -100);
-            this.animation.set(0, 0, -200, {
+            this.animation.set(0, 0, -150, {
               duration: 200
             });
             this.animation2.set(-0.8, 0, 0, {
@@ -77,24 +77,6 @@ Twitterus.prototype.onReceive = function onReceive (event, payload) {
             });
             this.openStatus = true;
         }
-
-
-
-        /*if(this.openStatus){
-            this.animation.setScale(1, 1, 1, {
-              duration: 0
-            }).setOrigin(0, 0, 0, {
-                duration: 300
-            });
-            this.openStatus = false;
-        }else {
-            this.animation.setScale(0.8, 0.8, 1, {
-              duration: 0
-            }).setOrigin(4, 0.5, 0, {
-                duration: 300
-            });
-            this.openStatus = true;
-        }*/
     }
 };
 

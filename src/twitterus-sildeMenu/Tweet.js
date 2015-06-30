@@ -11,6 +11,8 @@ function Tweet () {
     this.el = new DOMElement(this).setProperty('backgroundColor', getRandomColor())
                                   .setProperty('boxSizing', 'border-box')
                                   .setProperty('lineHeight', '100px')
+                                  .setProperty('textAlign', 'left')
+                                  .setProperty('padding', '0px 5%')
                                   .setProperty('borderBottom', '1px solid black')
                                   .setProperty('font-size', '12px')
                                   .setContent(getRandomMessage());

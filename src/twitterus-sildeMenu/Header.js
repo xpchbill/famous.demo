@@ -24,7 +24,6 @@ Header.prototype = Object.create(Node.prototype);
 Header.prototype.constructor = Header;
 
 Header.prototype.onReceive = function onReceive (event, payload) {
-
     if (event === 'changeSection') {
         this.changeSection(payload.to);
     }else if(event === 'click'){
@@ -34,14 +33,14 @@ Header.prototype.onReceive = function onReceive (event, payload) {
 
 Header.prototype.changeSection = function changeSection (to) {
     // -1 in Y will put the title directly above its parent
-    this.titleAlign.set(0, -1, 0, {duration: 250}, function () {
+    this.titleAlign.set(0, -1, 0, {duration: 150}, function () {
         // while the title is offscreen
         // change the content
         this.titleEl.setContent(to);
 
         // align 0, 0, 0 places the title back into its parent
         // exactly
-        this.titleAlign.set(0, 0, 0, {duration: 250, curve: 'spring'});
+        this.titleAlign.set(0, 0, 0, {duration: 200, curve: 'spring'});
     }.bind(this));
 };
 
